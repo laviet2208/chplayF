@@ -254,7 +254,7 @@ class _ScreenmainState extends State<Screenmain> {
                     Container(height: 20,),
 
                     Container(
-                      height: 20,
+                      height: 22,
                       child: Stack(
                         children: <Widget>[
                           Positioned(
@@ -279,10 +279,10 @@ class _ScreenmainState extends State<Screenmain> {
                             bottom: 0,
                             right: 20,
                             child: Container(
-                              width: 20,
+                              width: 22,
                               child: Icon(
                                 Icons.arrow_forward,
-                                size: 20,
+                                size: 22,
                                 color: Colors.black,
                               ),
                             ),
@@ -298,7 +298,7 @@ class _ScreenmainState extends State<Screenmain> {
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal, // Đặt scrollDirection thành Axis.horizontal
                         itemCount: tinhphi.length,
-                        padding: EdgeInsets.only(left: 10),
+                        padding: EdgeInsets.only(left: 10, right: 10),
                         itemBuilder: (context, index) {
                           return Padding(
                             padding: EdgeInsets.only(left: 15 ),
@@ -315,7 +315,7 @@ class _ScreenmainState extends State<Screenmain> {
                     Container(height: 35,),
 
                     Container(
-                      height: 20,
+                      height: 22,
                       child: Stack(
                         children: <Widget>[
                           Positioned(
@@ -336,11 +336,11 @@ class _ScreenmainState extends State<Screenmain> {
                           ),
 
                           Positioned(
-                            top: 0,
-                            bottom: 0,
+                            top: 2,
+                            bottom: 2,
                             right: 20,
                             child: Container(
-                              width: 20,
+                              width: 18,
                               decoration: BoxDecoration(
                                   image: DecorationImage(
                                       fit: BoxFit.cover,
@@ -360,7 +360,7 @@ class _ScreenmainState extends State<Screenmain> {
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal, // Đặt scrollDirection thành Axis.horizontal
                         itemCount: dexuat.length,
-                        padding: EdgeInsets.only(left: 10),
+                        padding: EdgeInsets.only(left: 10, right: 10),
                         itemBuilder: (context, index) {
                           return Padding(
                             padding: EdgeInsets.only(left: 15 ),
@@ -373,6 +373,81 @@ class _ScreenmainState extends State<Screenmain> {
                         },
                       ),
                     ),
+
+                    Container(height: 20,),
+
+                    Container(
+                      height: screenWidth/(1080/815),
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage('assets/image/trangtri1.png')
+                        )
+                      ),
+                    ),
+
+                    Container(height: 20,),
+
+                    Container(
+                      height: 22,
+                      child: Stack(
+                        children: <Widget>[
+                          Positioned(
+                            top: 0,
+                            left: 20,
+                            right: 10,
+                            bottom: 0,
+                            child: Container(
+                              alignment: Alignment.centerLeft,
+                              child: AutoSizeText(
+                                'Giải trí',
+                                style: TextStyle(
+                                    fontSize: 100,
+                                    color: Colors.black
+                                ),
+                              ),
+                            ),
+                          ),
+
+                          Positioned(
+                            top: 0,
+                            bottom: 0,
+                            right: 20,
+                            child: Container(
+                              width: 22,
+                              child: Icon(
+                                Icons.arrow_forward,
+                                size: 22,
+                                color: Colors.black,
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+
+                    Container(height: 20,),
+
+                    Container(
+                      height: screenHeight/(2400/455),
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal, // Đặt scrollDirection thành Axis.horizontal
+                        itemCount: dexuat.length,
+                        padding: EdgeInsets.only(left: 10, right: 10),
+                        itemBuilder: (context, index) {
+                          return Padding(
+                            padding: EdgeInsets.only(left: 15 ),
+                            child: Itemungdung(
+                              width: screenWidth/(1080/290),
+                              height: screenHeight/(2400/455),
+                              app: dexuat[index],
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+
+                    Container(height: 20,),
                   ],
                 ),
               ),
@@ -386,6 +461,54 @@ class _ScreenmainState extends State<Screenmain> {
                 height: screenHeight/12,
                 decoration: BoxDecoration(
                   color: Color.fromARGB(255, 239, 242, 247)
+                ),
+                child: Stack(
+                  children: <Widget>[
+                    Positioned(
+                      top: 10,
+                      left: 30,
+                      child: Container(
+                        height: (screenHeight/12) - 15,
+                        width: (screenHeight/12 - 15)/(152/163),
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            fit: BoxFit.cover,
+                            image: AssetImage('assets/image/bottomicon1.png')
+                          )
+                        ),
+                      ),
+                    ),
+
+                    Positioned(
+                      top: 10,
+                      right: (screenWidth - ((screenHeight/12 - 15)/(152/163)))/2,
+                      child: Container(
+                        height: (screenHeight/12) - 15,
+                        width: (screenHeight/12 - 15)/(152/163),
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: AssetImage('assets/image/bottomicon2.png')
+                            )
+                        ),
+                      ),
+                    ),
+
+                    Positioned(
+                      top: 10,
+                      right: 30,
+                      child: Container(
+                        height: (screenHeight/12) - 15,
+                        width: (screenHeight/12 - 15)/(152/163),
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: AssetImage('assets/image/bottomicon3.png')
+                            )
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             )
