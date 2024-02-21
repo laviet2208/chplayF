@@ -1,4 +1,5 @@
 import 'package:chplayf/Item/Item%20%E1%BB%A9ng%20d%E1%BB%A5ng.dart';
+import 'package:chplayf/M%C3%A0n%20h%C3%ACnh%20t%C3%ACm%20ki%E1%BA%BFm/Screensearch.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 
@@ -90,15 +91,22 @@ class _ScreenmainState extends State<Screenmain> {
                                   bottom: screenHeight/(2400/130)/3 - 2,
                                   left: 0,
                                   right: 0,
-                                  child: Container(
-                                    alignment: Alignment.center,
-                                    child: AutoSizeText(
-                                      'Tìm kiếm ứng dụ...',
-                                      style: TextStyle(
-                                          fontSize: 110,
-                                          color: Color.fromARGB(255, 68, 71, 76)
+                                  child: GestureDetector(
+                                    child: Container(
+                                      alignment: Alignment.center,
+                                      child: AutoSizeText(
+                                        'Tìm kiếm ứng dụ...',
+                                        style: TextStyle(
+                                            fontSize: 110,
+                                            color: Color.fromARGB(255, 68, 71, 76)
+                                        ),
                                       ),
                                     ),
+                                    onTap: () {
+                                      Navigator.of(context).pushReplacement(
+                                        MaterialPageRoute(builder: (context) => ScreenSearch()),
+                                      );
+                                    },
                                   ),
                                 ),
 
