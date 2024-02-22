@@ -1,7 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.chplayf.chplayf">
-   <application
-        android:label="chplayf"
+
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+
+
+    <application
+        android:label="Cửa hàng Play"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

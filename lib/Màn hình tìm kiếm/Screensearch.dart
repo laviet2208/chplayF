@@ -31,7 +31,7 @@ class _ScreenSearchState extends State<ScreenSearch> {
     timkiemlist.add(timkiem(Type: 2, Title: 'mbccs'));
     timkiemlist.add(timkiem(Type: 2, Title: 'mbanking'));
     timkiemlist.add(timkiem(Type: 1, Title: 'vssid'));
-    timkiemlist.add(timkiem(Type: 1, Title: 'vsid'));
+    timkiemlist.add(timkiem(Type: 1, Title: 'vss'));
     timkiemlist.add(timkiem(Type: 2, Title: 'vng'));
     timkiemlist.add(timkiem(Type: 2, Title: 'vneid'));
     timkiemlist.add(timkiem(Type: 2, Title: 'vtvgo'));
