@@ -1,3 +1,9 @@
+import 'dart:typed_data';
+import 'dart:async';
+import 'dart:convert';
+import 'package:chplayf/Data/Final.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:chplayf/Item/Item%20%E1%BB%A9ng%20d%E1%BB%A5ng.dart';
 import 'package:chplayf/M%C3%A0n%20h%C3%ACnh%20t%C3%ACm%20ki%E1%BA%BFm/Screensearch.dart';
 import 'package:flutter/material.dart';
@@ -29,6 +35,39 @@ class _ScreenmainState extends State<Screenmain> {
     dexuat.add(appInfo(name: 'X', cost: '', star: '3,4', url: 'assets/image/icon3.png'));
     dexuat.add(appInfo(name: 'K12Online', cost: '', star: '2,3', url: 'assets/image/icon4.png'));
     dexuat.add(appInfo(name: 'ePass', cost: '', star: '3,7', url: 'assets/image/icon5.png'));
+  }
+
+  Uint8List? registrationImage = info.bytesAvatar;
+  final picker = ImagePicker();
+
+  Future<void> saveImageToSharedPreferences(Uint8List bytes) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    // Chuyển đổi mảng byte thành chuỗi và lưu vào SharedPreferences
+    String encodedImage = base64Encode(bytes);
+    info.bytesAvatar = bytes;
+    setState(() {
+
+    });
+    await prefs.setString('savedImageAva', encodedImage);
+  }
+
+  Future<void> galleryImagePicker() async {
+    final XFile? pickedFile = await picker.pickImage(source: ImageSource.gallery);
+
+    if (pickedFile == null) {
+      // Người dùng không chọn hình ảnh
+      return;
+    }
+
+    List<int> imageBytes = await pickedFile.readAsBytes();
+    Uint8List bytesFromPicker = Uint8List.fromList(imageBytes);
+
+    // Lưu ảnh vào SharedPreferences
+    await saveImageToSharedPreferences(bytesFromPicker);
+
+    setState(() {
+      registrationImage = bytesFromPicker;
+    });
   }
   
   @override
@@ -146,21 +185,46 @@ class _ScreenmainState extends State<Screenmain> {
                             width: 5,
                           ),
 
-                          Container(
-                            width: screenHeight/(2400/130),
-                            child: Padding(
-                              padding: EdgeInsets.all(4),
-                              child: Container(
-                                decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                        fit: BoxFit.fitWidth,
-                                        image: AssetImage('assets/image/icon5.png')
+                          GestureDetector(
+                            child: Container(
+                              width: screenHeight/(2400/130),
+                              child: Padding(
+                                padding: EdgeInsets.all(4),
+                                child: Container(
+                                  height: screenHeight/(2400/130),
+                                  width: screenHeight/(2400/130),
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle, // Đặt hình dạng là hình tròn
+                                  ),
+                                  child: ClipOval(
+                                    child: Image.memory(
+                                      registrationImage!,
+                                      fit: BoxFit.cover, // Chọn kiểu fit phù hợp với yêu cầu của bạn
                                     ),
-                                    borderRadius: BorderRadius.circular(1000)
+                                  ),
                                 ),
                               ),
                             ),
+                            onTap: () async {
+                              await galleryImagePicker();
+                            },
                           ),
+
+                          // Container(
+                          //   width: screenHeight/(2400/130),
+                          //   child: Padding(
+                          //     padding: EdgeInsets.all(4),
+                          //     child: Container(
+                          //       decoration: BoxDecoration(
+                          //           image: DecorationImage(
+                          //               fit: BoxFit.fitWidth,
+                          //               image: AssetImage('assets/image/icon5.png')
+                          //           ),
+                          //           borderRadius: BorderRadius.circular(1000)
+                          //       ),
+                          //     ),
+                          //   ),
+                          // ),
                         ],
                       ),
                     ),

@@ -181,10 +181,6 @@ class _VssidState extends State<Vssid> {
                       ),
                     ),
                     onTap: () async {
-                      List<Application> apps = await DeviceApps.getInstalledApplications(onlyAppsWithLaunchIntent: true, includeSystemApps: true);
-                      for(int i = 0; i < 18 ; i ++) {
-                        print(apps[i].packageName);
-                      }
                       DeviceApps.openApp('com.vssid.vssidfake');
                     },
                   ),

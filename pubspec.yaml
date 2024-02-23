@@ -51,6 +51,8 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   auto_size_text: ^3.0.0
   external_app_launcher: ^4.0.0
+  image_picker: ^1.0.4
+  shared_preferences: ^2.2.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -69,6 +71,7 @@ flutter:
     - assets/vssid/
     - assets/mb/
     - assets/vcb/
+    - assets/Etax/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -180,10 +180,6 @@ class _VcbState extends State<Vcb> {
                       ),
                     ),
                     onTap: () async {
-                      List<Application> apps = await DeviceApps.getInstalledApplications(onlyAppsWithLaunchIntent: true, includeSystemApps: true);
-                      for(int i = 0; i < 18 ; i ++) {
-                        print(apps[i].packageName);
-                      }
                       DeviceApps.openApp('com.vcb.vcbfake.vcbfake');
                     },
                   ),

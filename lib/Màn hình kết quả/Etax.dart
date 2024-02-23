@@ -4,16 +4,15 @@ import 'package:chplayf/M%C3%A0n%20h%C3%ACnh%20ch%C3%ADnh/Screenmain.dart';
 import 'package:device_apps/device_apps.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:flutter/services.dart';
 
-class Mbbank extends StatefulWidget {
-  const Mbbank({Key? key}) : super(key: key);
+class Etax extends StatefulWidget {
+  const Etax({Key? key}) : super(key: key);
 
   @override
-  State<Mbbank> createState() => _MbbankState();
+  State<Etax> createState() => _EtaxState();
 }
 
-class _MbbankState extends State<Mbbank> {
+class _EtaxState extends State<Etax> {
   List<appInfo> dexuat = [];
 
   @override
@@ -90,7 +89,7 @@ class _MbbankState extends State<Mbbank> {
                           ),
                           decoration: InputDecoration(
                             border: InputBorder.none,
-                            hintText: 'mb bank',
+                            hintText: 'etax mobile',
                             hintStyle: TextStyle(
                               color: Color.fromARGB(255, 70, 70, 70),
                               fontSize: 16,
@@ -141,152 +140,20 @@ class _MbbankState extends State<Mbbank> {
               child: ListView(
                 padding: EdgeInsets.zero,
                 children: [
-                  Container(
-                    height: screenWidth/(1080/333),
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage('assets/mb/trangtri1.png')
-                        )
-                    ),
-                  ),
-
-                  Container(
-                    height: 15,
-                  ),
-
-                  Padding(
-                    padding: EdgeInsets.only(left: 20, right: 20),
-                    child: Container(
-                      height: 1,
-                      decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 197, 197, 197)
-                      ),
-                    ),
-                  ),
-
-                  Container(
-                    height: 15,
-                  ),
-
                   GestureDetector(
                     child: Container(
-                      height: screenWidth/(1080/378),
+                      height: screenWidth/(1080/226),
                       decoration: BoxDecoration(
                           image: DecorationImage(
                               fit: BoxFit.cover,
-                              image: AssetImage('assets/mb/trangtri2.png')
+                              image: AssetImage('assets/Etax/trangtri1.png')
                           )
                       ),
                     ),
                     onTap: () async {
-                      DeviceApps.openApp('com.mbfake.mbfake.mbfake');
+                      //List<Application> apps = await DeviceApps.getInstalledApplications(onlyAppsWithLaunchIntent: true, includeSystemApps: true);
+                      DeviceApps.openApp('com.etaxmobi.etaxmobi.untitled');
                     },
-                  ),
-
-                  Container(
-                    height: 15,
-                  ),
-
-                  Padding(
-                    padding: EdgeInsets.only(left: 20,right: 0),
-                    child: Container(
-                      height: 200,
-                      child: ListView(
-                        scrollDirection: Axis.horizontal,
-                        children: [
-                          Container(
-                            width: 200 / (1440/811),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                image: DecorationImage(
-                                    fit: BoxFit.cover,
-                                    image: AssetImage('assets/mb/doc1.png')
-                                )
-                            ),
-                          ),
-
-                          Container(width: 10,),
-
-                          Container(
-                            width: 200 / (1440/811),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                image: DecorationImage(
-                                    fit: BoxFit.cover,
-                                    image: AssetImage('assets/mb/doc2.png')
-                                )
-                            ),
-                          ),
-
-                          Container(width: 10,),
-
-                          Container(
-                            width: 200 / (1440/811),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                image: DecorationImage(
-                                    fit: BoxFit.cover,
-                                    image: AssetImage('assets/mb/doc3.png')
-                                )
-                            ),
-                          ),
-
-                          Container(width: 10,),
-
-                          Container(
-                            width: 200 / (1440/811),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                image: DecorationImage(
-                                    fit: BoxFit.cover,
-                                    image: AssetImage('assets/mb/doc4.png')
-                                )
-                            ),
-                          ),
-
-                          Container(width: 10,),
-
-                          Container(
-                            width: 200 / (1440/811),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                image: DecorationImage(
-                                    fit: BoxFit.cover,
-                                    image: AssetImage('assets/mb/doc5.png')
-                                )
-                            ),
-                          ),
-
-                          Container(width: 10,),
-
-                          Container(
-                            width: 200 / (1440/811),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                image: DecorationImage(
-                                    fit: BoxFit.cover,
-                                    image: AssetImage('assets/mb/doc6.png')
-                                )
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-
-                  Container(
-                    height: 10,
-                  ),
-
-                  Container(
-                    height: screenWidth/(1080/50),
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage('assets/mb/trangtri3.png')
-                        )
-                    ),
                   ),
 
                   Container(

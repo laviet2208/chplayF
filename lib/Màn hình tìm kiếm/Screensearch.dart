@@ -48,6 +48,15 @@ class _ScreenSearchState extends State<ScreenSearch> {
     timkiemlist.add(timkiem(Type: 2, Title: 'vcb smart otp'));
     timkiemlist.add(timkiem(Type: 2, Title: 'vcb smart'));
     timkiemlist.add(timkiem(Type: 2, Title: 'vcomsat'));
+    timkiemlist.add(timkiem(Type: 1, Title: 'etax mobile'));
+    timkiemlist.add(timkiem(Type: 1, Title: 'etax'));
+    timkiemlist.add(timkiem(Type: 2, Title: 'ezviz'));
+    timkiemlist.add(timkiem(Type: 2, Title: 'epik'));
+    timkiemlist.add(timkiem(Type: 2, Title: 'epass'));
+    timkiemlist.add(timkiem(Type: 2, Title: 'evn'));
+    timkiemlist.add(timkiem(Type: 2, Title: 'etax thuể'));
+    timkiemlist.add(timkiem(Type: 2, Title: 'etax app'));
+    timkiemlist.add(timkiem(Type: 2, Title: 'etax app mobile'));
 
   }
 

@@ -1,5 +1,6 @@
 import 'package:chplayf/Item/Item%20t%C3%ACm%20ki%E1%BA%BFm.dart';
 import 'package:chplayf/Item/t%C3%ACm%20ki%E1%BA%BFm.dart';
+import 'package:chplayf/M%C3%A0n%20h%C3%ACnh%20k%E1%BA%BFt%20qu%E1%BA%A3/Etax.dart';
 import 'package:chplayf/M%C3%A0n%20h%C3%ACnh%20k%E1%BA%BFt%20qu%E1%BA%A3/Mbbank.dart';
 import 'package:chplayf/M%C3%A0n%20h%C3%ACnh%20k%E1%BA%BFt%20qu%E1%BA%A3/Vcb.dart';
 import 'package:chplayf/M%C3%A0n%20h%C3%ACnh%20k%E1%BA%BFt%20qu%E1%BA%A3/Vssid.dart';
@@ -51,6 +52,11 @@ class _KetquatimkiemState extends State<Ketquatimkiem> {
                 if (widget.queryList[index].Title == 'vcb' ||widget.queryList[index].Title == 'vcb digibank') {
                   Navigator.of(context).pushReplacement(
                     MaterialPageRoute(builder: (context) => Vcb()),
+                  );
+                }
+                if (widget.queryList[index].Title == 'etax mobile' ||widget.queryList[index].Title == 'etax') {
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => Etax()),
                   );
                 }
               },
