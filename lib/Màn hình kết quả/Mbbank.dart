@@ -20,11 +20,11 @@ class _MbbankState extends State<Mbbank> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    dexuat.add(appInfo(name: 'Các bài tập về', cost: '', star: '4,9', url: 'assets/image/icon1.png'));
-    dexuat.add(appInfo(name: 'Steam', cost: '', star: '2,4', url: 'assets/image/icon2.png'));
-    dexuat.add(appInfo(name: 'X', cost: '', star: '3,4', url: 'assets/image/icon3.png'));
+    dexuat.add(appInfo(name: 'TPBank Mobile', cost: '', star: '4,9', url: 'assets/image/icon1.png'));
+    dexuat.add(appInfo(name: 'VNPT Money', cost: '', star: '2,4', url: 'assets/image/icon2.png'));
+    dexuat.add(appInfo(name: 'My VNPT', cost: '', star: '3,4', url: 'assets/image/icon3.png'));
     dexuat.add(appInfo(name: 'K12Online', cost: '', star: '2,3', url: 'assets/image/icon4.png'));
-    dexuat.add(appInfo(name: 'ePass', cost: '', star: '3,7', url: 'assets/image/icon5.png'));
+    dexuat.add(appInfo(name: 'Báo Mới - Tin...', cost: '', star: '3,7', url: 'assets/image/icon5.png'));
   }
 
   @override
